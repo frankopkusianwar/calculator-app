@@ -17,7 +17,7 @@ In this project I build a simple calculator app using REACT
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://calculator-app-microv.herokuapp.com/)
 
 ## Getting Started
 
