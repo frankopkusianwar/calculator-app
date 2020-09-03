@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import operationsMethod from './operate';
 
 const calculate = (data, name) => {
