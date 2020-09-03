@@ -1,9 +1,9 @@
-import operate from './operate';
+import operationsMethod from './operate';
 
 const calculate = (data, name) => {
   const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   const operations = ['+', '-', '/', '*'];
-  // const { operate } = operationsMethod;
+  const { operate } = operationsMethod;
   if (digits.includes(name) && data.next === null) {
     data.next = name;
   } else if (name === '.' && data.operation === null) {
