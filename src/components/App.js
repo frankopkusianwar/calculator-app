@@ -14,6 +14,7 @@ export default class App extends Component {
         operation: null,
       },
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(buttonName) {
@@ -28,8 +29,8 @@ export default class App extends Component {
   render() { 
     return (
       <div id="App">
-        <Display />
-        <ButtonPannel />
+        <Display result={data.total || data.next}/>
+        <ButtonPannel handleClick={this.handleClick}/>
       </div>
     );
   }
