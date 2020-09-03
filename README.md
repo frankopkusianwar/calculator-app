@@ -9,7 +9,7 @@ In this project I build a simple calculator app using REACT
 - Perform basic mathematical operations using the calculator
 
 ## Calculator Page
-![screenshot]()
+![screenshot](./screenshots/calc.PNG)
 
 ## Built With
 
