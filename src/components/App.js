@@ -8,16 +8,24 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      obj: {
+      data: {
         total: null,
         next: null,
         operation: null,
       },
     };
   }
-  // eslint-disable-next-line no-unused-vars
-  render() {
+
+  handleClick(buttonName) {
     const { calculate } = calculateMethod;
+    const { data } = this.state;
+    const newData = calculate(data, buttonName);
+    this.setState({
+      data: newData,
+    });
+  }
+
+  render() { 
     return (
       <div id="App">
         <Display />
