@@ -3,8 +3,12 @@ import operationsMethod from './operate';
 
 const calculate = (data, name) => {
   const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  const operations = ['+', '-', '/', '*'];
+  const operations = ['+', '-', '/', 'x'];
   const { operate } = operationsMethod;
+  if (data.total && data.total.includes('no')) {
+    data.next = null;
+    data.total = null;
+  }
   if (digits.includes(name) && data.next === null) {
     data.next = name;
   } else if (name === '.' && data.operation === null) {
@@ -31,6 +35,7 @@ const calculate = (data, name) => {
     if (data.next) data.next *= -1;
     if (data.total) data.total *= -1;
   } else if (name === '%') {
+    data.operation = name;
     data.total = operate(data.next, null, data.operation);
   }
   return data;

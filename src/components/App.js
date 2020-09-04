@@ -4,7 +4,7 @@ import calculateMethod from '../logic/calculate';
 import Display from './Display';
 import ButtonPannel from './ButtonPanel';
 
-export default class App extends Component {
+export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -26,10 +26,11 @@ export default class App extends Component {
     });
   }
 
-  render() { 
+  render() {
+    const { data } = this.state;
     return (
       <div id="App">
-        <Display result={data.total || data.next}/>
+        <Display calcResult={data.total || data.next || '0'}/>
         <ButtonPannel handleClick={this.handleClick}/>
       </div>
     );

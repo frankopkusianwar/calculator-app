@@ -1,26 +1,34 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
-const renderButton = (i, bg, width) => <Button name={i} color={bg} wide={width} />;
-
-export default function ButtonPanel() {
+export default function ButtonPanel(props) {
+  const { handleClick } = props;
   return (
     <div className="calculator">
-      {renderButton('AC', 'rgb(194, 188, 188)')}
-      {renderButton('+/-', 'rgb(194, 188, 188)')}
-      {renderButton('%', 'rgb(194, 188, 188)')}
-      {renderButton('/')}
-      {renderButton('7', 'rgb(194, 188, 188)')}
-      {renderButton('8', 'rgb(194, 188, 188)')}
-      {renderButton('9', 'rgb(194, 188, 188)')}
-      {renderButton('X')}
-      {renderButton('4', 'rgb(194, 188, 188)')}
-      {renderButton('5', 'rgb(194, 188, 188)')}
-      {renderButton('6', 'rgb(194, 188, 188)')}
-      {renderButton('-')}
-      {renderButton('0', 'rgb(194, 188, 188)', '50%')}
-      {renderButton('.', 'rgb(194, 188, 188)')}
-      {renderButton('=')}
+      <Button name="AC" color="rgb(194, 188, 188)" wide="25%" handleClick={handleClick}/>
+      <Button name="+/-" color="rgb(194, 188, 188)" wide="25%" handleClick={handleClick}/>
+      <Button name="%" color="rgb(194, 188, 188)" wide="25%" handleClick={handleClick}/>
+      <Button name="/" color="rgb(228, 145, 78)" wide="25%" handleClick={handleClick}/>
+      <Button name="7" color="rgb(194, 188, 188)" wide="25%" handleClick={handleClick}/>
+      <Button name="8" color="rgb(194, 188, 188)" wide="25%" handleClick={handleClick}/>
+      <Button name="9" color="rgb(194, 188, 188)" wide="25%" handleClick={handleClick}/>
+      <Button name="x" color="rgb(228, 145, 78)" wide="25%" handleClick={handleClick}/>
+      <Button name="4" color="rgb(194, 188, 188)" wide="25%" handleClick={handleClick}/>
+      <Button name="5" color="rgb(194, 188, 188)" wide="25%" handleClick={handleClick}/>
+      <Button name="6" color="rgb(194, 188, 188)" wide="25%" handleClick={handleClick}/>
+      <Button name="+" color="rgb(228, 145, 78)" wide="25%" handleClick={handleClick}/>
+      <Button name="1" color="rgb(194, 188, 188)" wide="25%" handleClick={handleClick}/>
+      <Button name="2" color="rgb(194, 188, 188)" wide="25%" handleClick={handleClick}/>
+      <Button name="3" color="rgb(194, 188, 188)" wide="25%" handleClick={handleClick}/>
+      <Button name="-" color="rgb(228, 145, 78)" wide="25%" handleClick={handleClick}/>
+      <Button name="0" color="rgb(194, 188, 188)" wide="50%" handleClick={handleClick}/>
+      <Button name="." color="rgb(194, 188, 188)" wide="25%" handleClick={handleClick}/>
+      <Button name="=" color="rgb(228, 145, 78)" wide="25%" handleClick={handleClick}/>
     </div>
   );
 }
+
+ButtonPanel.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+};
