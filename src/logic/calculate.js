@@ -1,10 +1,10 @@
 /* eslint-disable no-param-reassign */
-import operationsMethod from './operate';
+import operationMethod from './operate';
 
 const calculate = (data, name) => {
   const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   const operations = ['+', '-', '/', 'x'];
-  const { operate } = operationsMethod;
+  const { operate } = operationMethod;
   if (data.total && data.total.includes('no')) {
     data.next = null;
     data.total = null;

@@ -5,7 +5,7 @@ export default function Button(props) {
   const { name, color, wide, handleClick } = props;
   return (
     <button type="submit" className="button" style={{ background: color, flex: wide }} onClick={() => handleClick(name)}>
-      {name}
+      {name}    
     </button>
   );
 }
