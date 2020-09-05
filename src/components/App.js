@@ -30,8 +30,8 @@ export default class App extends React.Component {
     const { data } = this.state;
     return (
       <div id="App">
-        <Display calcResult={data.total || data.next || '0'}/>
-        <ButtonPannel handleClick={this.handleClick}/>
+        <Display calcResult={data.total || data.next || '0'} />
+        <ButtonPannel handleClick={this.handleClick} />
       </div>
     );
   }
